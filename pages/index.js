@@ -11,7 +11,7 @@ export default function Home() {
       <div className='container mx-auto px4 mx8'>
         <div className='flex flex-col p-6 md:p-20'>
             <Image loading="lazy" src="/assets/svg/david.svg" alt="Avatar of me" width={120} height={120} />
-            <h1 className='text-3xl md:text-6xl text-center font-bold'>Hello there, i'm <span className='text-purple-700 dark:text-green-500'>David!</span></h1>
+            <h1 className='text-3xl md:text-6xl text-center font-bold'>Hello there, i&apos;m <span className='text-purple-700 dark:text-green-500'>David!</span></h1>
             <h2 className='text-3xl md:text-6xl  text-center font-bold'>A Full Stack Developer based in the Netherlands and I like to KISS and keep it DRY ;)</h2>
             <h2 className='text-3xl md:text-4xl  text-center font-thin'>(Keep It Simple, Stuid &amp; Dont Repeat Yourself)</h2>
         </div>
