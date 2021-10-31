@@ -2,21 +2,50 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Main from '../components/layouts/Main'
+import HomeColumn from '../components/HomeColumn'
+import {TerminalIcon, CodeIcon, DesktopComputerIcon} from '@heroicons/react/solid'
 
 export default function Home() {
   return (
     <Main>
-      <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate sollicitudin leo, vel finibus augue rutrum eget. Nam velit sapien, pulvinar a nunc nec, porta pellentesque velit. Sed sit amet molestie lorem. Aliquam tempus consequat massa, a vulputate purus maximus eget. Sed a sapien nec libero vulputate consectetur. Fusce eleifend leo a dolor semper, eget cursus orci mollis. Etiam massa lectus, fringilla eu arcu eu, blandit laoreet orci. Proin at leo nec diam dapibus dictum. Mauris fermentum mollis mauris a congue.
-Vestibulum non faucibus leo. Quisque sollicitudin, purus quis ultrices maximus, erat dolor faucibus risus, ac efficitur lectus ante et lectus. Pellentesque mollis porttitor leo, non fringilla turpis efficitur at. Praesent eget arcu id metus faucibus sagittis. Cras quis ex libero. Praesent in rhoncus nibh, at auctor quam. Praesent odio turpis, pulvinar quis ex accumsan, molestie consectetur est. Mauris et nisl interdum, pulvinar dolor at, tempor orci. Phasellus congue, nunc sit amet blandit fermentum, nibh est consectetur lectus, eget dapibus neque urna eget tellus.
-Ut auctor, erat a mattis posuere, tortor ligula aliquam libero, at commodo ex tellus et nibh. In sit amet turpis sed purus euismod rhoncus sed nec purus. Sed varius vel augue nec aliquam. Suspendisse hendrerit suscipit tortor eget sollicitudin. Mauris tincidunt, elit quis pellentesque bibendum, neque erat euismod urna, vitae consequat libero leo eu libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ullamcorper quam non dapibus vehicula. Praesent maximus auctor eros a imperdiet.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate sollicitudin leo, vel finibus augue rutrum eget. Nam velit sapien, pulvinar a nunc nec, porta pellentesque velit. Sed sit amet molestie lorem. Aliquam tempus consequat massa, a vulputate purus maximus eget. Sed a sapien nec libero vulputate consectetur. Fusce eleifend leo a dolor semper, eget cursus orci mollis. Etiam massa lectus, fringilla eu arcu eu, blandit laoreet orci. Proin at leo nec diam dapibus dictum. Mauris fermentum mollis mauris a congue.
-
-Vestibulum non faucibus leo. Quisque sollicitudin, purus quis ultrices maximus, erat dolor faucibus risus, ac efficitur lectus ante et lectus. Pellentesque mollis porttitor leo, non fringilla turpis efficitur at. Praesent eget arcu id metus faucibus sagittis. Cras quis ex libero. Praesent in rhoncus nibh, at auctor quam. Praesent odio turpis, pulvinar quis ex accumsan, molestie consectetur est. Mauris et nisl interdum, pulvinar dolor at, tempor orci. Phasellus congue, nunc sit amet blandit fermentum, nibh est consectetur lectus, eget dapibus neque urna eget tellus.
-
-Ut auctor, erat a mattis posuere, tortor ligula aliquam libero, at commodo ex tellus et nibh. In sit amet turpis sed purus euismod rhoncus sed nec purus. Sed varius vel augue nec aliquam. Suspendisse hendrerit suscipit tortor eget sollicitudin. Mauris tincidunt, elit quis pellentesque bibendum, neque erat euismod urna, vitae consequat libero leo eu libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ullamcorper quam non dapibus vehicula. Praesent maximus auctor eros a imperdiet.</p>
+      <div className='container mx-auto px4 mx8'>
+        <div className='flex flex-col p-6 md:p-20'>
+            <Image loading="lazy" src="/assets/svg/david.svg" alt="Avatar of me" width={120} height={120} />
+            <h1 className='text-3xl md:text-6xl text-center font-bold'>Hello there, i'm <span className='text-purple-700 dark:text-green-500'>David!</span></h1>
+            <h2 className='text-3xl md:text-6xl  text-center font-bold'>A Full Stack Developer based in the Netherlands and I like to KISS and keep it DRY ;)</h2>
+            <h2 className='text-3xl md:text-4xl  text-center font-thin'>(Keep It Simple, Stuid &amp; Dont Repeat Yourself)</h2>
+        </div>
       </div>
+
+      <div className='flex bg-purple-700 text-white dark:bg-gray-700 p-6 md:p-20'>
+        <div className='container mx-auto px4 mx8'>
+          <p className='text-center text-2xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id metus dapibus quam sagittis elementum sit amet quis ipsum. Maecenas vehicula, tortor et pellentesque vestibulum, risus enim lobortis nibh, bibendum pulvinar orci enim et augue. Integer viverra ultrices pretium. Vestibulum luctus quam rutrum elit mattis, nec dignissim eros sollicitudin. Praesent nulla velit, accumsan eu facilisis non, mattis tempus tellus. Vivamus lobortis semper elit. Phasellus ac suscipit mauris. Nulla feugiat lectus lacus, sed placerat nisl condimentum euismod. Sed augue diam, efficitur quis porta eget, iaculis non sem. Donec vitae ipsum consectetur, molestie orci ac, iaculis dui.</p>
+        </div>
+      </div>
+
+    <div className='container mx-auto px4 mx8'>
+      <div className='flex flex-col md:flex-row md:justify-between'>
+        <HomeColumn icon={<TerminalIcon id='TerminalIcon' className='text-purple-700 dark:text-green-500 text-center w-24 h-24 mx-auto'/>} title='Backend Development' text='I have a passion for backend development and coding' skills='Linux, Shell scripting, Python, PHP, NodeJs, Laravel, Symfony, MySQL' tools='Command Line Interface, Sublime, Visual Studio Code, NPM, Composer' />
+        <HomeColumn icon={<CodeIcon id='CodeIcon' className='text-purple-700 dark:text-green-500 text-center w-24 h-24 mx-auto' />} title='Frontend Development' text='I like to connect the backend with an awesome frontend and user experience.' skills='HTML, CSS/Sass/Less, JavaScript, REACT/Native/NextJS, TailwindCSS, BootStrap' tools='TailwindCSS, Bootstrap, Jquery, React, VIM, Visual code Studio, Sublime' middle={true} />
+        <HomeColumn icon={<DesktopComputerIcon id='DesktopComputerIcon' className='text-purple-700 dark:text-green-500 text-center text-base w2-4 h-24 mx-auto' />} title='Learning and teaching' text='I am always working on myself and improving my technical ability.' skills='Autodidactic, Passion, Interests' tools='My Brain :-)' />
+      </div>
+    </div>
+
+    <div className='flex bg-purple-700 text-white dark:bg-gray-700 p-6 md:p-20'>
+        <div className='container mx-auto px4 mx8'>
+          <p className='text-center text-2xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id metus dapibus quam sagittis elementum sit amet quis ipsum. Maecenas vehicula, tortor et pellentesque vestibulum, risus enim lobortis nibh, bibendum pulvinar orci enim et augue. Integer viverra ultrices pretium. Vestibulum luctus quam rutrum elit mattis, nec dignissim eros sollicitudin. Praesent nulla velit, accumsan eu facilisis non, mattis tempus tellus. Vivamus lobortis semper elit. Phasellus ac suscipit mauris. Nulla feugiat lectus lacus, sed placerat nisl condimentum euismod. Sed augue diam, efficitur quis porta eget, iaculis non sem. Donec vitae ipsum consectetur, molestie orci ac, iaculis dui.</p>
+        </div>
+      </div>
+
+      <div className='container mx-auto px4 mx8'>
+      <div className='flex flex-col md:flex-row md:justify-between'>
+        <HomeColumn icon={<TerminalIcon id='TerminalIcon' className='text-purple-700 dark:text-green-500 text-center w-24 h-24 mx-auto'/>} title='Backend Development' text='I have a passion for backend development and coding.' skills='Linux, Shell scripting, Python, PHP, NodeJs, Laravel, Symfony, MySQL' tools='Command Line Interface, Sublime, Visual Studio Code, NPM, Composer' middle={true} />
+        <HomeColumn icon={<CodeIcon id='CodeIcon' className='text-purple-700 dark:text-green-500 text-center w-24 h-24 mx-auto' />} title='Frontend Development' text='I like to connect the backend with an awesome frontend and user experience.' skills='HTML, CSS/Sass/Less, JavaScript, REACT/Native/NextJS, TailwindCSS, BootStrap' tools='TailwindCSS, Bootstrap, Jquery, React, VIM, Visual code Studio, Sublime' middle={false} />
+        <HomeColumn icon={<DesktopComputerIcon id='DesktopComputerIcon' className='text-purple-700 dark:text-green-500 text-center text-base w2-4 h-24 mx-auto' />} title='Learning and teaching' text='I am always working on myself and improving my technical ability.' skills='Autodidactic, Passion, Interests' tools='My Brain :-)' middle={true} />
+      </div>
+    </div>
+
+
     </Main>
   )
 }

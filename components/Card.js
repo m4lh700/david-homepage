@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 
-export default function Card() {
+export default function Card({id, title, excerpt, img}) {
+    console.log(img);
     return (
-    <div className="max-w-sm w-full lg:max-w-full lg:flex">
+    <div key={id} className="max-w-sm w-full lg:max-w-full lg:flex">
     <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
     <Image
                 loading="lazy"
@@ -13,7 +14,7 @@ export default function Card() {
                 height={500}
             />
     </div>
-    <div clclassNameass="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+    <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
         <div className="mb-8">
         <p className="text-sm text-gray-600 flex items-center">
             <svg className="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -21,8 +22,8 @@ export default function Card() {
             </svg>
             Members only
         </p>
-        <div className="text-gray-900 font-bold text-xl mb-2">Can coffee make you a better developer?</div>
-        <p className="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+        <div className="text-gray-900 font-bold text-xl mb-2">{title}</div>
+        <div className="text-gray-700 text-base" dangerouslySetInnerHTML={{__html: excerpt}}></div>
         </div>
         <div className="flex items-center">
         <div className="text-sm">

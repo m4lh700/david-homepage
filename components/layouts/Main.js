@@ -5,6 +5,13 @@ import Footer from './Footer'
 import Script from 'next/script'
 import Card from '../Card'
 //import styles from '../styles/Layout.module.css'
+import { motion, AnimatePresence } from "framer-motion"
+
+const variants = {
+    hidden: { opacity: 0, x: -200, y: 0 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: -100 },
+}
 
 const Main = ({children, router}) => {
     return (
@@ -18,15 +25,21 @@ const Main = ({children, router}) => {
             <title>David Holleman - homepage</title>           
         </Head>
         <Header />
-        <main className='flex-grow'>
-            <div className='container mx-auto px4 mx8'>
-                {children}
+        <AnimatePresence exitBeforeEnter>
+        <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="flex-grow"
+        >
 
-                <Card />
-                <Card />
+            <div className=''>
+                {children}
             <Footer />
             </div>
-        </main>
+
+        </motion.main>
+        </AnimatePresence>
         </>
     )
 }
