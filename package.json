@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "webpack-runtime": "^1.0.0",
     "@heroicons/react": "^1.0.5",
     "axios": "^0.24.0",
     "babel-core": "^6.26.3",

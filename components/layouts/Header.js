@@ -58,9 +58,9 @@ const Header = () => {
     <nav className="container mx-auto mx8 flex items-center justify-between flex-wrap bg-teal-500 py-4 px-4 md:px-0">
     <div className="flex items-center flex-shrink-0 mr-6 w-0 flex-1 flex items-center overflow-y-auto max-w-full">
         <Image loading="lazy" src="/assets/svg/david.svg" alt="Picture of the author" width={54} height={54} />
-        <span className="text-2xl font-semibold text-xl tracking-tight ml-3">David Holleman</span>
-        <span className="text-2xl font-semibold text-xl tracking-tight ml-3 hidden md:block">|</span>
-        <span className="text-md font-light text-xl tracking-tight ml-3 hidden  md:block">Full stack developer</span>
+        <span className="text-2xl font-semibold text-xl tracking-tight ml-3 text-dark dark:text-white">David Holleman</span>
+        <span className="text-2xl font-semibold text-xl tracking-tight ml-3 hidden md:block text-dark dark:text-white">|</span>
+        <span className="text-md font-light text-xl tracking-tight ml-3 hidden md:block text-dark dark:text-white">Full stack developer</span>
     </div>
     <div className="block lg:hidden">
         <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400" onClick={handleClick}>
