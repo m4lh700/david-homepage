@@ -57,9 +57,7 @@ const Header = () => {
 <header className='w-full flex flex-row justify-between items-center border-b border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-700 sticky top-0 z-50 transition duration-300 shadow'>
     <nav className="container mx-auto mx8 flex items-center justify-between flex-wrap bg-teal-500 py-4 px-4 md:px-0">
     <div className="flex items-center flex-shrink-0 mr-6 w-0 flex-1 flex items-center overflow-y-auto max-w-full">
-        <Link href="/" passHref>
-            <Image loading="lazy" src="/assets/svg/david.svg" alt="Picture of the author" width={54} height={54} />
-        </Link>
+        <Image loading="lazy" src="/assets/svg/david.svg" alt="Picture of the author" width={54} height={54} />
         <span className="text-2xl font-semibold text-xl tracking-tight ml-3">David Holleman</span>
         <span className="text-2xl font-semibold text-xl tracking-tight ml-3 hidden md:block">|</span>
         <span className="text-md font-light text-xl tracking-tight ml-3 hidden  md:block">Full stack developer</span>
