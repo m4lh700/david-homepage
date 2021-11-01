@@ -4,6 +4,8 @@ import styles from '../styles/Home.module.css'
 import Main from '../components/layouts/Main'
 import HomeColumn from '../components/HomeColumn'
 import {TerminalIcon, CodeIcon, DesktopComputerIcon} from '@heroicons/react/solid'
+import CTAbuton from '../components/CTAbuton'
+import HomeBlogCard from '../components/HomeBlogCard'
 
 export default function Home() {
   return (
@@ -17,9 +19,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='flex bg-purple-700 text-white dark:bg-gray-700 p-6 md:p-20'>
+      <div className='flex bg-purple-700 text-white dark:bg-gray-700 p-6 md:p-20 md:pb-40'>
         <div className='container mx-auto px4 mx8'>
           <p className='text-center text-2xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id metus dapibus quam sagittis elementum sit amet quis ipsum. Maecenas vehicula, tortor et pellentesque vestibulum, risus enim lobortis nibh, bibendum pulvinar orci enim et augue. Integer viverra ultrices pretium. Vestibulum luctus quam rutrum elit mattis, nec dignissim eros sollicitudin. Praesent nulla velit, accumsan eu facilisis non, mattis tempus tellus. Vivamus lobortis semper elit. Phasellus ac suscipit mauris. Nulla feugiat lectus lacus, sed placerat nisl condimentum euismod. Sed augue diam, efficitur quis porta eget, iaculis non sem. Donec vitae ipsum consectetur, molestie orci ac, iaculis dui.</p>
+          <div className='text-center md:mt-8'> <CTAbuton text='About' link='/about' size='text-2xl' /> </div>
         </div>
       </div>
 
@@ -31,9 +34,10 @@ export default function Home() {
       </div>
     </div>
 
-    <div className='flex bg-purple-700 text-white dark:bg-gray-700 p-6 md:p-20'>
+    <div className='flex bg-purple-700 text-white dark:bg-gray-700 p-6 md:p-20 md:pb-40 md:pt-40'>
         <div className='container mx-auto px4 mx8'>
           <p className='text-center text-2xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id metus dapibus quam sagittis elementum sit amet quis ipsum. Maecenas vehicula, tortor et pellentesque vestibulum, risus enim lobortis nibh, bibendum pulvinar orci enim et augue. Integer viverra ultrices pretium. Vestibulum luctus quam rutrum elit mattis, nec dignissim eros sollicitudin. Praesent nulla velit, accumsan eu facilisis non, mattis tempus tellus. Vivamus lobortis semper elit. Phasellus ac suscipit mauris. Nulla feugiat lectus lacus, sed placerat nisl condimentum euismod. Sed augue diam, efficitur quis porta eget, iaculis non sem. Donec vitae ipsum consectetur, molestie orci ac, iaculis dui.</p>
+          <div className='text-center md:mt-8'> <CTAbuton text='Projects' link='/projects' size='text-2xl' /> </div>   
         </div>
       </div>
 
@@ -44,6 +48,26 @@ export default function Home() {
         <HomeColumn icon={<DesktopComputerIcon id='DesktopComputerIcon' className='text-purple-700 dark:text-green-500 text-center text-base w2-4 h-24 mx-auto' />} title='Learning and teaching' text='I am always working on myself and improving my technical ability.' skills='Autodidactic, Passion, Interests' tools='My Brain :-)' middle={true} />
       </div>
     </div>
+
+    <div className='flex bg-purple-700 text-white dark:bg-gray-700 p-6 md:p-20 md:pb-40 md:pt-40'>
+        <div className='container mx-auto px4 mx8'>
+          <p className='text-center text-2xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id metus dapibus quam sagittis elementum sit amet quis ipsum. Maecenas vehicula, tortor et pellentesque vestibulum, risus enim lobortis nibh, bibendum pulvinar orci enim et augue. Integer viverra ultrices pretium. Vestibulum luctus quam rutrum elit mattis, nec dignissim eros sollicitudin. Praesent nulla velit, accumsan eu facilisis non, mattis tempus tellus. Vivamus lobortis semper elit. Phasellus ac suscipit mauris. Nulla feugiat lectus lacus, sed placerat nisl condimentum euismod. Sed augue diam, efficitur quis porta eget, iaculis non sem. Donec vitae ipsum consectetur, molestie orci ac, iaculis dui.</p>
+          <div className='text-center md:mt-8'> <CTAbuton text='Blog' link='/blog' size='text-2xl' /> </div>   
+        </div>
+      </div>
+
+    <div className='container mx-auto px4 mx8'>
+      <h3 className='text-center text-2xl'>Latest blog articles</h3>
+      <div className='flex flex-col justify-between md:flex-row'>
+      <HomeBlogCard src='/assets/img/card-left.jpg' width='300' height='300' alt='blog image' loading='lazy' title='test' />
+      <HomeBlogCard src='/assets/img/card-left.jpg' width='300' height='300' alt='blog image' loading='lazy' title='test' />
+      <HomeBlogCard src='/assets/img/card-left.jpg' width='300' height='300' alt='blog image' loading='lazy' title='test' />
+      <HomeBlogCard src='/assets/img/card-left.jpg' width='300' height='300' alt='blog image' loading='lazy' title='test' />
+      <HomeBlogCard src='/assets/img/card-left.jpg' width='300' height='300' alt='blog image' loading='lazy' title='test' />
+      </div>
+    </div>
+
+
 
 
     </Main>
