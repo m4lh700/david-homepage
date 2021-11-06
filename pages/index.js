@@ -6,6 +6,7 @@ import HomeColumn from '../components/HomeColumn'
 import {TerminalIcon, CodeIcon, DesktopComputerIcon} from '@heroicons/react/solid'
 import CTAbuton from '../components/CTAbuton'
 import HomeBlogCard from '../components/HomeBlogCard'
+import Typist from 'react-typist'
 
 export default function Home() {
   return (

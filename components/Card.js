@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-export default function Card({id, title, excerpt, img}) {
+export default function Card({id, title, excerpt, img, url}) {
     console.log(img);
     return (
     <div key={id} className="max-w-sm w-full lg:max-w-full lg:flex">
@@ -22,7 +22,7 @@ export default function Card({id, title, excerpt, img}) {
             </svg>
             Members only
         </p>
-        <div className="text-gray-900 font-bold text-xl mb-2">{title}</div>
+        <div className="text-gray-900 font-bold text-xl mb-2"><a href={url}>{title}</a></div>
         <div className="text-gray-700 text-base" dangerouslySetInnerHTML={{__html: excerpt}}></div>
         </div>
         <div className="flex items-center">
