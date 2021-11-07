@@ -8,7 +8,7 @@ export default function Card({id, title, excerpt, img, url}) {
     <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
     <Image
                 loading="lazy"
-                src="/assets/img/card-left.jpg"
+                src={img}
                 alt="Picture of the author"
                 width={500}
                 height={500}
