@@ -12,6 +12,8 @@ export default function PostHeader({img, title}) {
             src={img}
             alt={title}
             objectFit='cover'
+            placeholder='blur'
+            blurDataURL='/assets/img/blur.jpg'
           />
       </div>
     )
